@@ -66,6 +66,10 @@ GraphRAG流程的基本步骤如下：
 
 ![Auto-templating](graphRAG-v0.10-20240728/Auto-templating.png)
 
+通过prompt tuning 生成对应的graph
+
+![prompt-tuning](graphRAG-v0.10-20240728/prompt-tuning.png)
+
 
 #### 3.2	通过entity 和 relation算法形成不同的community，并且community级别总结
 
@@ -196,7 +200,7 @@ bug2:
 
 #### 6.1	Cost的计算公式以及BaseRAG和graphRAG的cost对比（前期处理和查询时）
 
-#### 6.2	实际case中BaseRAG和graphRAG的Benchmark测试对比,已经两种技术如何实现融合是最佳选择
+#### 6.2	实际case中BaseRAG和graphRAG的Benchmark测试对比,以及两种技术如何实现融合能够达到最佳选择
 
 #### 6.3    实际case中performance测试对比
 
@@ -208,7 +212,7 @@ bug2:
     但是如果是已经给定的chunk的情况下，或者就是需要通过语义切割的情况下，怎么去客制化这一部分？
 
 
-#### 6.5    langchain 与 llamaIndex，已经neo4j实现的横向对比
+#### 6.5    langchain 与 llamaIndex，以及neo4j实现的横向对比
 
 
 
