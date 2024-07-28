@@ -117,7 +117,7 @@ baseline RAG 难以处理需要聚合数据集中信息以组成答案的查询�
 
 ### 5. 动手试验
 
-1. 最简单的hands-on Demo
+#### 5.1 最简单的hands-on Demo
 
 通过直接安装graphrag包，本地实现动手实现：
 
@@ -125,7 +125,7 @@ baseline RAG 难以处理需要聚合数据集中信息以组成答案的查询�
 
 ![hands-on Demo01](graphRAG-v0.10-20240728/demo01.png)
 
-2. 运行graphRAG的example：
+#### 5.2 运行graphRAG的example：
 
 [hands-on Demo02](https://github.com/microsoft/graphrag/tree/main/examples)
 
@@ -178,7 +178,7 @@ bug2:
 ![steps_workflow](graphRAG-v0.10-20240728/steps_workflow.png)
 
 
-3. 比较完整运行sample-graphrag-accelerator
+#### 5.3 比较完整运行sample-graphrag-accelerator
 
 ![hands-on Demo03](graphRAG-v0.10-20240728/graphrag-architecture-diagram.png)
 
@@ -196,18 +196,20 @@ bug2:
 
 #### 6.1	Cost的计算公式以及BaseRAG和graphRAG的cost对比（前期处理和查询时）
 
-#### 6.2	实际case中BaseRAG和graphRAG的Benchmark测试对比
+#### 6.2	实际case中BaseRAG和graphRAG的Benchmark测试对比,已经两种技术如何实现融合是最佳选择
 
 #### 6.3    实际case中performance测试对比
 
-#### 6.4    不同的chunk策略
-
-#### 6.5    langchain 与 llamaIndex，已经neo4j实现的横向对比
+#### 6.4    不同的chunk策略的影响
 
 根据文档中显示：     
     
     有意的让不同的entity出现在多个chunck里面，来增加实体被识别的可能性，而不是通过seamic chunck 来集中内容。
     但是如果是已经给定的chunk的情况下，或者就是需要通过语义切割的情况下，怎么去客制化这一部分？
+
+
+#### 6.5    langchain 与 llamaIndex，已经neo4j实现的横向对比
+
 
 
 
