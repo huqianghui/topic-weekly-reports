@@ -202,6 +202,21 @@ bug2:
 
 #### 6.2	实际case中BaseRAG和graphRAG的Benchmark测试对比,以及两种技术如何实现融合能够达到最佳选择
 
+文档中给了一些评估标准：
+    
+    1. comprehensiveness (completeness within the framing of the implied context of the question), 
+    全面性（在问题隐含上下文框架内的完整性）
+    
+    2. human enfranchisement (provision of supporting source material or other contextual information), 
+    （提供支持源材料或其他上下文信息）
+
+    3. diversity (provision of differing viewpoints or angles on the question posed). 
+    多样性（对所提出的问题提供不同的观点或角度）
+    
+    4. faithfulness to help ensure factual, coherent results grounded in the source material
+    Results show that GraphRAG achieves a similar level of faithfulness to baseline RAG.
+    GraphRAG达到了与基线RAG相似的忠实度。
+
 #### 6.3    实际case中performance测试对比
 
 #### 6.4    不同的chunk策略的影响
@@ -246,7 +261,13 @@ bug2:
 
 [graphrag-unlocking-llm-discovery-on-narrative-private-data](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/)
 
+[From Local to Global: A Graph RAG Approach to Query-Focused Summarization 论文](https://arxiv.org/pdf/2404.16130)
+
 [query-focused-summarization-graphRAG](https://www.microsoft.com/en-us/research/publication/from-local-to-global-a-graph-rag-approach-to-query-focused-summarization/)
+
+[SELFCHECKGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models论文](https://arxiv.org/pdf/2303.08896)
+
+[unified-copilot.azurewebsites.net：在线demo站点](https://unified-copilot.azurewebsites.net/?dataset=podcast&include_standard_rag=true)
 
 [微软内部的一次内部分享视频](https://microsoft.sharepoint.com/teams/aiml-cc/_layouts/15/stream.aspx?id=%2Fteams%2Faiml%2Dcc%2FCommunity%20Videos%2FIntroduction%20to%20Microsoft%E2%80%99s%20GraphRAG%20Capability%2D20240723%5F105903%2DMeeting%20Recording%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MzMzLjg2fX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E1fa97bac%2D587a%2D4d80%2Db2fd%2D5702257b2dab&web=1)
 
