@@ -237,9 +237,15 @@ bug2:
 
 [neo4j-GraphRAG_github_sample](https://github.com/neo4j-examples/rag-demo)
 
+[Implementing ‘From Local to Global’ GraphRAG with Neo4j and LangChain: Constructing the Graph](https://medium.com/neo4j/implementing-from-local-to-global-graphrag-with-neo4j-and-langchain-constructing-the-graph-73924cc5bab4)
+
+[Enhancing the Accuracy of RAG Applications With Knowledge Graphs](https://medium.com/neo4j/enhancing-the-accuracy-of-rag-applications-with-knowledge-graphs-ad5e2ffab663)
+
 [lagnchain-neo4j-GraphRAG_github_sample](https://github.com/hfhoffman1144/langchain_neo4j_rag_app)
 
-### 7.	还需要一些技术疑点
+[lagnchain-Constructing knowledge graphs](https://python.langchain.com/v0.1/docs/use_cases/graph/constructing/)
+
+### 7.	一些技术疑点
 
 
 #### 7.1	Meta-agent怎么选择localsearch 和 globalsearch呢？
