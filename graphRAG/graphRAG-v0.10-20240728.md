@@ -184,6 +184,12 @@ bug2:
 
 [graphrag-accelerator](https://github.com/Azure-Samples/graphrag-accelerator)
 
+除了使用notebook来上传处理文件以及执行local和global search之外，也提供front-end的streamlit应用，可以通过页面的方式实现。
+
+![graphrag-accelerator-frontend](graphRAG-v0.10-20240728/graphrag-accelerator-frontend.png)
+
+![graphrag-accelerator-frontend-streamlit](graphRAG-v0.10-20240728/graphrag-accelerator-frontend-streamlit.png)
+
 
 
 ### 6.	需要进一步验证的点
@@ -195,6 +201,8 @@ bug2:
 #### 6.3    实际case中performance测试对比
 
 #### 6.4    不同的chunk策略
+
+#### 6.5    langchain 与 llamaIndex，已经neo4j实现的横向对比
 
 根据文档中显示：     
     
