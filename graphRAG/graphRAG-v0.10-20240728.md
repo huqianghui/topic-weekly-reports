@@ -214,8 +214,15 @@ bug2:
 
 #### 6.5    langchain 与 llamaIndex，以及neo4j实现的横向对比
 
+[llama_index-GraphRAG_examples_code](https://github.com/run-llama/llama_index/blob/main/docs/docs/examples/cookbooks/GraphRAG_v1.ipynb)
 
+[llama_index-GraphRAG_doc](https://docs.llamaindex.ai/en/stable/examples/query_engine/knowledge_graph_query_engine/)
 
+[neo4j-GraphRAG_doc](https://neo4j.com/developer-blog/knowledge-graph-rag-application/)
+
+[neo4j-GraphRAG_github_sample](https://github.com/neo4j-examples/rag-demo)
+
+[lagnchain-neo4j-GraphRAG_github_sample](https://github.com/hfhoffman1144/langchain_neo4j_rag_app)
 
 ### 7.	还需要一些技术疑点
 
@@ -226,8 +233,11 @@ bug2:
 
 #### 7.2	怎么实现增量的处理
 
-
 #### 7.3	如果实现对中间的结果进行验证？
+
+#### 7.4	在图片展示中，怎么显示community? 目前只能显示节点和边
+
+
 
 
 ### 8. 相关链接
