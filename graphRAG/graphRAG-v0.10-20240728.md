@@ -261,11 +261,11 @@ bug2:
 
 [graphrag-unlocking-llm-discovery-on-narrative-private-data](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/)
 
-[From Local to Global: A Graph RAG Approach to Query-Focused Summarization 论文](https://arxiv.org/pdf/2404.16130)
+[论文：From Local to Global: A Graph RAG Approach to Query-Focused Summarization](https://arxiv.org/pdf/2404.16130)
 
 [query-focused-summarization-graphRAG](https://www.microsoft.com/en-us/research/publication/from-local-to-global-a-graph-rag-approach-to-query-focused-summarization/)
 
-[SELFCHECKGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models论文](https://arxiv.org/pdf/2303.08896)
+[论文：SELFCHECKGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models](https://arxiv.org/pdf/2303.08896)
 
 [unified-copilot.azurewebsites.net：在线demo站点](https://unified-copilot.azurewebsites.net/?dataset=podcast&include_standard_rag=true)
 
