@@ -226,6 +226,21 @@ bug2:
 
 [微软内部的一次内部分享视频](https://microsoft.sharepoint.com/teams/aiml-cc/_layouts/15/stream.aspx?id=%2Fteams%2Faiml%2Dcc%2FCommunity%20Videos%2FIntroduction%20to%20Microsoft%E2%80%99s%20GraphRAG%20Capability%2D20240723%5F105903%2DMeeting%20Recording%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MzMzLjg2fX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E1fa97bac%2D587a%2D4d80%2Db2fd%2D5702257b2dab&web=1)
 
+    会议主要围绕GraphRAG项目展开，涉及以下几个关键议题：
+    GraphRAG介绍与应用:
+        • Jonathan介绍了GraphRAG，一种利用LLMs创建知识图谱的系统，特别是在私有数据集上进行发现的能力。4:37
+    合作与技术转移:
+        • 讨论了与Azure AI搜索、Azure文档智能等团队的合作，以及GraphRAG技术在Microsoft内部的应用和转移。9:17
+    技术深度与优化:
+        • 探讨了GraphRAG的技术深度，包括使用小型语言模型进行优化，以及FastGraphRAG作为低资源版本的开发。31:41
+    自动模板生成:
+        • 强调了自动模板生成机制的重要性，以简化用户在使用GraphRAG时创建提取模板的过程。34:15
+    未来方向:
+        • 讨论了GraphRAG未来的发展方向，包括与更多产品团队合作，以及探索新的应用场景。35:48
+    这次会议涵盖了GraphRAG项目的多个方面，从技术细节到合作伙伴关系，以及未来的发展计划。
+
+    
+
     在问答环节中，参与者提出了多个问题，以下是一些问题及其回答的摘要：
         • 关于GraphRAG与标准RAG的区别:
         • Arnab询问GraphRAG是否会取代标准RAG，以及如何根据用户问题决定使用哪种方法。Jonathan解释说，GraphRAG是作为标准RAG的补充，用于处理标准RAG难以解决的抽象问题。45:28
