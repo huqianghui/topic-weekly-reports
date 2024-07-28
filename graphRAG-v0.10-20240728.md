@@ -29,6 +29,25 @@
 
 ### 3.	GraphRAG的数据处理流程是怎么样？
 
+GraphRAG流程的基本步骤如下：
+    
+        1. Slice up an input corpus into a series of TextUnits, which act as analyzable units for the rest of the process, and provide fine-grained references into our outputs.
+        
+        将输入语料库切成一系列 TextUnits，这些 TextUnits 充当流程其余部分的可分析单元，并在我们的输出中提供细粒度的引用。
+
+        2. Extract all entities, relationships, and key claims from the TextUnits using an LLM. 
+        
+        使用LLM来抽取这些实体，关系，主要申明
+
+        3. Perform a hierarchical clustering of the graph using the Leiden technique. To see this visually, check out Figure 1 above. Each circle is an entity (e.g., a person, place, or organization), with the size representing the degree of the entity, and the color representing its community.
+        
+        使用 Leiden 技术对图形执行分层聚类。要直观地看到这一点，请查看上面的图 1。每个圆圈都是一个实体（例如，一个人、一个地方或组织），大小代表实体的程度，颜色代表其社区。
+
+        4. Generate summaries of each community and its constituents from the bottom-up. This aids in holistic understanding of the dataset. 
+        
+        自下而上生成每个社区及其成员的摘要。这有助于全面了解数据集。
+
+
 #### 3.1	通过文档生成domain spefic entity 和 entity relation 
 
 #### 3.2	通过entity 和 relation算法形成不同的community，并且community级别总结
