@@ -4,7 +4,7 @@
 
 ##### 1.1.1 前置处理流程
 
-![baselineRAG](graphRAG-v0.10-20240728/baselineRAG.png)
+![baselineRAG](graphRAG-overview-20240728/baselineRAG.png)
 
 以文档为中心，没有做其他的内容洞见，通过chunk方式来切割
 
@@ -12,7 +12,7 @@
 
 通过不同算法的打分，找回top N方式, 然后通过prompt给LLM，来回答问题。
 
-![search-scoring-flow](graphRAG-v0.10-20240728/search-scoring-flow.png)
+![search-scoring-flow](graphRAG-overview-20240728/search-scoring-flow.png)
 
 ##### 1.1.3常规的优化优化手段失效之后，一些进一步的优化手段
 
@@ -38,7 +38,7 @@
 
 GraphRAG流程的基本步骤如下：
 
-![GraphRAG](graphRAG-v0.10-20240728/GraphRAG.png)
+![GraphRAG](graphRAG-overview-20240728/GraphRAG.png)
 
         1. Slice up an input corpus into a series of TextUnits, which act as analyzable units for the rest of the process, and provide fine-grained references into our outputs.
         
@@ -58,17 +58,17 @@ GraphRAG流程的基本步骤如下：
 
 更加详细的步骤步骤参照：
 
-[![dataflow](graphRAG-v0.10-20240728/dataflow.png)](https://microsoft.github.io/graphrag/posts/index/1-default_dataflow/)
+[![dataflow](graphRAG-overview-20240728/dataflow.png)](https://microsoft.github.io/graphrag/posts/index/1-default_dataflow/)
 
 #### 3.1	通过文档生成domain spefic entity 和 entity relation 
         
 开箱即用地使用GraphRAG处理数据可能无法产生最佳结果。强烈建议您按照文档中的提示优化指南对提示进行微调
 
-![Auto-templating](graphRAG-v0.10-20240728/Auto-templating.png)
+![Auto-templating](graphRAG-overview-20240728/Auto-templating.png)
 
 通过prompt tuning 生成对应的graph
 
-![prompt-tuning](graphRAG-v0.10-20240728/prompt-tuning.png)
+![prompt-tuning](graphRAG-overview-20240728/prompt-tuning.png)
 
 
 #### 3.2	通过entity 和 relation算法形成不同的community，并且community级别总结
@@ -76,7 +76,7 @@ GraphRAG流程的基本步骤如下：
 使用图创建自下而上的聚类，该聚类将数据分层组织为语义聚类（在下面的图中使用颜色表示）。
 这种划分允许对语义概念和主题进行预总结，这有助于对数据集进行整体理解。
 
-![community-color](graphRAG-v0.10-20240728/community-color.png)
+![community-color](graphRAG-overview-20240728/community-color.png)
 
 社区总结的使用算法Leiden的论文链接：
 
@@ -94,7 +94,7 @@ GraphRAG流程的基本步骤如下：
 
 [system prompt](https://github.com/microsoft/graphrag/blob/main/graphrag/query/structured_search/local_search/system_prompt.py)
 
-![localSearch](graphRAG-v0.10-20240728/localSearch.png)
+![localSearch](graphRAG-overview-20240728/localSearch.png)
 
 #### 4.2	Global search的实现流程 
 
@@ -112,7 +112,7 @@ baseline RAG 难以处理需要聚合数据集中信息以组成答案的查询�
 全局检索响应的质量可能会受到为获取社群报告而选择的社区层次结构的严重影响。
 具有详细报告的较低层次结构级别往往会产生更全面的响应，但由于报告量大，也可能增加生成最终响应所需的时间和LLM资源。
 
-![globalSearch](graphRAG-v0.10-20240728/globalSearch.png)
+![globalSearch](graphRAG-overview-20240728/globalSearch.png)
 
 [map system prompt](https://github.com/microsoft/graphrag/blob/main/graphrag/query/structured_search/global_search/map_system_prompt.py)
 
@@ -127,7 +127,7 @@ baseline RAG 难以处理需要聚合数据集中信息以组成答案的查询�
 
 [hands-on Demo01](https://microsoft.github.io/graphrag/posts/get_started/)
 
-![hands-on Demo01](graphRAG-v0.10-20240728/demo01.png)
+![hands-on Demo01](graphRAG-overview-20240728/demo01.png)
 
 #### 5.2 运行graphRAG的example：
 
@@ -175,24 +175,24 @@ bug2:
 
 在索引过程中的pipelines：
 
-![default_pipeline_workflows](graphRAG-v0.10-20240728/index_pipelines.png)
+![default_pipeline_workflows](graphRAG-overview-20240728/index_pipelines.png)
 
 每个pipelines里面的对应的workflow里面分成不同的steps
 
-![steps_workflow](graphRAG-v0.10-20240728/steps_workflow.png)
+![steps_workflow](graphRAG-overview-20240728/steps_workflow.png)
 
 
 #### 5.3 比较完整运行sample-graphrag-accelerator
 
-![hands-on Demo03](graphRAG-v0.10-20240728/graphrag-architecture-diagram.png)
+![hands-on Demo03](graphRAG-overview-20240728/graphrag-architecture-diagram.png)
 
 [graphrag-accelerator](https://github.com/Azure-Samples/graphrag-accelerator)
 
 除了使用notebook来上传处理文件以及执行local和global search之外，也提供front-end的streamlit应用，可以通过页面的方式实现。
 
-![graphrag-accelerator-frontend](graphRAG-v0.10-20240728/graphrag-accelerator-frontend.png)
+![graphrag-accelerator-frontend](graphRAG-overview-20240728/graphrag-accelerator-frontend.png)
 
-![graphrag-accelerator-frontend-streamlit](graphRAG-v0.10-20240728/graphrag-accelerator-frontend-streamlit.png)
+![graphrag-accelerator-frontend-streamlit](graphRAG-overview-20240728/graphrag-accelerator-frontend-streamlit.png)
 
 
 
@@ -250,7 +250,7 @@ bug2:
 
 #### 7.1	Meta-agent怎么选择localsearch 和 globalsearch呢？
 
-![meta-agent](graphRAG-v0.10-20240728/meta-agent.png)
+![meta-agent](graphRAG-overview-20240728/meta-agent.png)
 
 #### 7.2	怎么实现增量的处理
 
