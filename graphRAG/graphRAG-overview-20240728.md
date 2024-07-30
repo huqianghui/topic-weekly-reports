@@ -275,6 +275,8 @@ bug2:
 
 [unified-copilot.azurewebsites.net：在线demo站点](https://unified-copilot.azurewebsites.net/?dataset=podcast&include_standard_rag=true)
 
+[graph-rag-on-azure]https://ragaboutit.com/graph-rag-on-azure-a-comprehensive-guide/
+
 [微软内部的一次内部分享视频](https://microsoft.sharepoint.com/teams/aiml-cc/_layouts/15/stream.aspx?id=%2Fteams%2Faiml%2Dcc%2FCommunity%20Videos%2FIntroduction%20to%20Microsoft%E2%80%99s%20GraphRAG%20Capability%2D20240723%5F105903%2DMeeting%20Recording%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MzMzLjg2fX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E1fa97bac%2D587a%2D4d80%2Db2fd%2D5702257b2dab&web=1)
 
     会议主要围绕GraphRAG项目展开，涉及以下几个关键议题：
