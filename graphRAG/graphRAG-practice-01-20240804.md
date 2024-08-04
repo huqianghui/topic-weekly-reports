@@ -90,8 +90,9 @@ Token Consumption formula:
 global的调用堆栈和时间类似，实际情况如下：
 ![globalSearch的调用链路和时间消耗](./graphRAG-practice-01-20240804/globalSearch-callStack.png)
 
-*** 从中我们可以看出，不管local search 还是 global search 它不在直接调用text 和document本身，而是加工之后的数据，所以它给LLM的数据量是要小一些。  ***
-*** 从保证结果质量的情况下，raphRAG能够生成更准确和相关性更高的结果，从而减少了不必要的重复查询。**
+**从中我们可以看出，不管local search 还是 global search 它不在直接调用text 和document本身，而是加工之后的数据，所以它给LLM的数据量是要小一些。**
+
+**从保证结果质量的情况下，raphRAG能够生成更准确和相关性更高的结果，从而减少了不必要的重复查询。**
 
 
 ## 3. 如果评估GraphRAG，特别是生成的知识图谱的评估好坏？
@@ -121,7 +122,7 @@ global的调用堆栈和时间类似，实际情况如下：
 目前还没有比较好的评价体系，都是通过了解这个领域支持的人，对一些实体，关系和协变，或者一些描述是否恰当等。
 
 
-*** 特别是中文的情况下，接下来可以尝试的是看entity ,claim以及community report是否通过更强的LLM来进一步检测。这个还需要进一步探索 ***
+**特别是中文的情况下，接下来可以尝试的是看entity ,claim以及community report是否通过更强的LLM来进一步检测。这个还需要进一步探索**
 
 ## 4. 如果我的文件增加了，怎么实现增量？
 
