@@ -8,8 +8,15 @@
 
 ## 主题
 
-- [microsoft-graphRAG](graphRAG/)
+- [GraphRAG](graphRAG/)
 
+- [Promptflow](promptflow/)
+
+- [multimodel-RAG](multimodelRAG/)
+
+- [multiagent-framework](multiagentFramework/)
+
+- [LLM-finetune](fineTune/)
 
 ## 目录
 
