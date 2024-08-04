@@ -37,3 +37,10 @@
 
 如果把一个azure openAI的一个Assitant，快速和bot service framework整合，快速变成一个助手。
 
+
+5. LLM的长时间记忆
+
+在使用chatgpt的时候，它已经有这个功能，对应的截图如下：
+![chatgpt长期记忆](./topic/chatgpt-LongTermMem.png)
+
+在autogen中，也有对应instruct 
