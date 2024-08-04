@@ -23,4 +23,5 @@
 ## 目录
 
 - [2024-30W-graphRAG-overview](graphRAG/graphRAG-overview-20240728.md)
+- [2024-31W-graphRAG-practice-01](graphRAG/graphRAG-practice-01-20240804.md)
 

@@ -40,7 +40,7 @@ Token Consumption formula:
     Community  Token Consumption  = （ 1900 + Community Description ）* （ Community Count ）
     Claim Extraction Consumption  = （ 1200 + chunk ）* （ Base Call Count ）optional ；默认不抽取，需要打开配置项才抽取
 
-** 前面的数字，是默认的prompt template通过gpt-turbo c100K对应的编码器的token数字，如果你修改了模型，或者自定义prompt都需要相应的变化。
+**前面的数字，是默认的prompt template通过gpt-turbo c100K对应的编码器的token数字，如果你修改了模型，或者自定义prompt都需要相应的变化。**
 
 调用链路如下：
 
