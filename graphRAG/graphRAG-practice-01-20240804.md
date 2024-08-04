@@ -62,12 +62,14 @@ Token Consumption formula:
 
 在[overview中local-search的实现流程](graphRAG-overview-20240728.md#41local-search的实现流程)文档中给出了local search主要的主要过程。
 
-通过图，得到大致通过向量查询找到对应entity，然后通过entity找到对应的relation和Covariate（这里就是上面提到的claim，它是optional），最后把这些信息给LLM，让它给出最后的结果。
+通过图，得到大致通过向量查询找到对应entity，然后通过entity找到对应的relation和Covariate（这里就是上面提到的claim，它是optional），community report和text unit 最后把这些信息给LLM，让它给出最后的结果。
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="./graphRAG-practice-01-20240804/entity.png" alt="Entity定义" style="width: 30%;"/>
-  <img src="./graphRAG-practice-01-20240804/Relation.png" alt="Entity关系" style="width: 30%;"/>
-  <img src="./graphRAG-practice-01-20240804/Covariate.png" alt="Covariate就是上面claim" style="width: 30%;"/>
+  <img src="./graphRAG-practice-01-20240804/communityReport.png" alt="communityReport定义" style="width: 19%;"/> 
+  <img src="./graphRAG-practice-01-20240804/entity.png" alt="Entity定义" style="width: 19%;"/>
+  <img src="./graphRAG-practice-01-20240804/Relation.png" alt="Entity关系" style="width: 19%;"/>
+  <img src="./graphRAG-practice-01-20240804/Covariate.png" alt="Covariate就是上面claim" style="width: 19%;"/>
+  <img src="./graphRAG-practice-01-20240804/text_unit.png" alt="Covariate就是上面claim" style="width: 19%;"/>
 </div>
 
 然后我们进一步查看方法调用的堆栈以及对应的时间消耗：
@@ -75,6 +77,17 @@ Token Consumption formula:
 
 从这个图中，我们可以看到主要时间还是在search方法上，也就是LLM的调用，因为max reponse默认给2000，而且local search输出的内容也很长，所以时间消耗比较多。
 只要对prompt进行调整，也可以对性能的调优。同时也需要确保内容效果能达到预期。
+
+实践调用的prompt 内容，参考路径：
+./graphrag/query/structured_search/local_search/system_prompt.py
+
+里面的context_data，请参考下面的sample。
+[对应的local search prompt sample](./graphRAG-practice-01-20240804/localSearch_prompt_sample.txt)
+
+**从中我们可以看出，不管local search 还是  主要时间还是消耗LLM上。**
+
+**从保证结果质量的情况下，local search 使用到entity，relation，claim，community report以及text unit所以它的内容是比较全面的。**
+
 
 ##### global search
 
@@ -90,9 +103,14 @@ Token Consumption formula:
 global的调用堆栈和时间类似，实际情况如下：
 ![globalSearch的调用链路和时间消耗](./graphRAG-practice-01-20240804/globalSearch-callStack.png)
 
-**从中我们可以看出，不管local search 还是 global search 它不在直接调用text 和document本身，而是加工之后的数据，所以它给LLM的数据量是要小一些。**
+[对应的gloabl search map prompt sample](./graphRAG-practice-01-20240804/map_prompt_sample.txt)
 
-**从保证结果质量的情况下，raphRAG能够生成更准确和相关性更高的结果，从而减少了不必要的重复查询。**
+[对应的gloabl search reduce prompt sample](./graphRAG-practice-01-20240804/reduce_prompt_sample.txt)
+
+
+**从中我们可以看出， global search 主要时间也还是消耗LLM上。**
+
+**global search没有使用原文，通过在communit report上进行map 操作，然后得到的结果给reduce，比langchain里面的遍历还是高效一些，如果能确保最终结果一致的情况下的话**
 
 
 ## 3. 如果评估GraphRAG，特别是生成的知识图谱的评估好坏？
