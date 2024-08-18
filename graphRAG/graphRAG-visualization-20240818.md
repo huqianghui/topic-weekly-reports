@@ -129,6 +129,6 @@ web结果展示：
 具体源码可以参看github：
 [graphrag-visualizer](https://github.com/huqianghui/graphrag-visualizer)
 
-[graphrag3dknowledge](./graphRAG-visualization-20240818/reactJs-graphrag-web-browser-render.png)
-[graphrag3dknowledge](./graphRAG-visualization-20240818/reactJs-graphrag-entity-web-browser.png)
+![graphrag3dknowledge](./graphRAG-visualization-20240818/reactJs-graphrag-web-browser-render.png)
+![graphrag3dknowledge](./graphRAG-visualization-20240818/reactJs-graphrag-entity-web-browser.png)
 
