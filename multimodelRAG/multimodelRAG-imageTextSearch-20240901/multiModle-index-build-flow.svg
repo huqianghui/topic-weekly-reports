@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <style>
+    .box { stroke: #333; stroke-width: 2; }
+    .arrow { fill: none; stroke: #555; stroke-width: 3; }
+    .text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+    .number { font-weight: bold; fill: white; }
+    .title { font-size: 24px; font-weight: bold; fill: #333; }
+  </style>
+  
+  <!-- Title -->
+  <text x="300" y="40" class="title" text-anchor="middle">Vector Search Workflow</text>
+
+  <!-- Step 1: Create Embeddings -->
+  <rect class="box" x="200" y="70" width="200" height="80" rx="15" ry="15" fill="#FFB3BA" />
+  <circle cx="220" cy="90" r="15" fill="#FF6B6B" />
+  <text x="220" y="96" class="number" text-anchor="middle">1</text>
+  <text x="300" y="100" class="text" text-anchor="middle">Create</text>
+  <text x="300" y="125" class="text" text-anchor="middle">Embeddings</text>
+  
+  <!-- Arrow 1 to 2 -->
+  <path class="arrow" d="M300 150 L300 180" marker-end="url(#arrowhead)" />
+
+  <!-- Step 2: Configure Index Fields -->
+  <rect class="box" x="200" y="180" width="200" height="80" rx="15" ry="15" fill="#BAFFC9" />
+  <circle cx="220" cy="200" r="15" fill="#4CAF50" />
+  <text x="220" y="206" class="number" text-anchor="middle">2</text>
+  <text x="300" y="210" class="text" text-anchor="middle">Configure</text>
+  <text x="300" y="235" class="text" text-anchor="middle">Index Fields</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path class="arrow" d="M300 260 L300 290" marker-end="url(#arrowhead)" />
+
+  <!-- Step 3: Configure vector search -->
+  <rect class="box" x="200" y="290" width="200" height="80" rx="15" ry="15" fill="#BAE1FF" />
+  <circle cx="220" cy="310" r="15" fill="#2196F3" />
+  <text x="220" y="316" class="number" text-anchor="middle">3</text>
+  <text x="300" y="315" class="text" text-anchor="middle">Configure</text>
+  <text x="300" y="340" class="text" text-anchor="middle">vector search</text>
+  <text x="300" y="365" class="text" text-anchor="middle">configuration</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path class="arrow" d="M300 370 L300 400" marker-end="url(#arrowhead)" />
+
+  <!-- Step 4: Configure semantic search -->
+  <rect class="box" x="200" y="400" width="200" height="80" rx="15" ry="15" fill="#FFFFBA" />
+  <circle cx="220" cy="420" r="15" fill="#FFC107" />
+  <text x="220" y="426" class="number" text-anchor="middle">4</text>
+  <text x="300" y="425" class="text" text-anchor="middle">Configure</text>
+  <text x="300" y="450" class="text" text-anchor="middle">semantic search</text>
+  <text x="300" y="475" class="text" text-anchor="middle">configuration</text>
+
+  <!-- Arrow 4 to 5 -->
+  <path class="arrow" d="M300 480 L300 510" marker-end="url(#arrowhead)" />
+
+  <!-- Step 5: Create Index with configurations -->
+  <rect class="box" x="200" y="510" width="200" height="80" rx="15" ry="15" fill="#E6E6FA" />
+  <circle cx="220" cy="530" r="15" fill="#9C27B0" />
+  <text x="220" y="536" class="number" text-anchor="middle">5</text>
+  <text x="300" y="535" class="text" text-anchor="middle">Create Index with</text>
+  <text x="300" y="560" class="text" text-anchor="middle">vector and semantic</text>
+  <text x="300" y="585" class="text" text-anchor="middle">search config</text>
+
+  <!-- Arrow 5 to 6 -->
+  <path class="arrow" d="M300 590 L300 620" marker-end="url(#arrowhead)" />
+
+  <!-- Step 6: Create the Index -->
+  <rect class="box" x="200" y="620" width="200" height="80" rx="15" ry="15" fill="#FFDFBA" />
+  <circle cx="220" cy="640" r="15" fill="#FF9800" />
+  <text x="220" y="646" class="number" text-anchor="middle">6</text>
+  <text x="300" y="660" class="text" text-anchor="middle">Create the Index</text>
+
+  <!-- Arrow 6 to 7 -->
+  <path class="arrow" d="M300 700 L300 730" marker-end="url(#arrowhead)" />
+
+  <!-- Step 7: Upload embeddings and metadata -->
+  <rect class="box" x="150" y="730" width="300" height="80" rx="15" ry="15" fill="#D7BDE2" />
+  <circle cx="170" cy="750" r="15" fill="#8E44AD" />
+  <text x="170" y="756" class="number" text-anchor="middle">7</text>
+  <text x="300" y="760" class="text" text-anchor="middle">Upload embeddings and metadata</text>
+  <text x="300" y="785" class="text" text-anchor="middle">[text and others] into the index</text>
+
+  <!-- Arrow definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555" />
+    </marker>
+  </defs>
+</svg>
