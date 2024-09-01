@@ -219,4 +219,8 @@ vector_search=VectorSearch(
 	2.	旧版本的处理方式：
 	    •	对于较早的模型版本，如gpt-4-turbo及更早的版本，这些模型可能会改为使用JSON模式来处理输出。
 
-![responseFormat](./multimodelRAG-imageTextSearch-20240901/responseFormat.png)        
+![responseFormat](./multimodelRAG-imageTextSearch-20240901/responseFormat.png)     
+
+
+### 完整代码实现
+[multi-model-data-process-rag](https://github.com/huqianghui/multi-model-data-process-rag)
