@@ -26,3 +26,4 @@
 - [2024-31W-graphRAG-practice-01](graphRAG/graphRAG-practice-01-20240804.md)
 - [2024-33W-graphRAG-visualization](graphRAG/graphRAG-visualization-20240818.md)
 - [2024-34W-graphRAG-agentic-practice](graphRAG/graphRAG-agentic-practice-20240825.md)
+- [2024-35W-multimode-image&text_rag](multimodelRAG/multimodelRAG-imageTextSearch-20240901.md)
