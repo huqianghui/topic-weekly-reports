@@ -130,6 +130,105 @@ OWL 2 EL专为概念术语描述、推理而设计，在生物医疗领域广泛
 ![Senamic_Search_Reasoning](./KnowledgeGraph-introduce-20240908/Senamic_Search_Reasoning.png)
 ![Senamic_Search_Reasoning2](./KnowledgeGraph-introduce-20240908/Senamic_Search_Reasoning2.png)
 
+### 图数据库的分类
+
+#### 从查询语句维度看图数据库，可以分为以下几类：
+
+##### 1. 支持 Cypher 查询语言的图数据库
+
+    Cypher 是一种基于声明式图查询语言，最早由 Neo4j 开发，用于查询属性图（Property Graph）。以下是一些支持 Cypher 的数据库：
+
+	•	Neo4j
+        •	描述: Neo4j 是最知名的图数据库之一，Cypher 是它的原生查询语言。
+        •	特点: 强调图模式的简单性和关系的高效查询，适用于复杂的关系查询。
+
+	•	Memgraph
+        •	描述: Memgraph 是一个实时流图数据库，支持 Cypher 查询语言。
+        •	特点: 强调实时性和高性能，适合数据流应用。
+
+	•	RedisGraph
+        •	描述: RedisGraph 是 Redis 的模块之一，支持 Cypher 查询语言。
+        •	特点: 轻量、高效，集成在 Redis 中，适合需要快速、简单图查询的场景。
+
+##### 2. 支持 Gremlin 查询语言的图数据库
+
+Gremlin 是 Apache TinkerPop 图处理框架的一部分，用于属性图查询。以下数据库支持 Gremlin 查询：
+
+    •	JanusGraph
+        •	描述: JanusGraph 是一个分布式图数据库，支持大规模图数据存储和查询，原生支持 Gremlin。
+        •	特点: 适用于大规模图数据、强一致性和扩展性。
+
+	•	Amazon Neptune
+        •	描述: Amazon Neptune 是 AWS 的托管图数据库，支持 Gremlin 和 SPARQL。
+        •	特点: 云原生设计，支持属性图（Gremlin）和 RDF（SPARQL），适合多模型图数据库应用。
+
+	•	Azure Cosmos DB (Gremlin API)
+        •	描述: Azure Cosmos DB 是微软的多模型数据库，支持 Gremlin 查询语言。
+        •	特点: 提供全球分布式、高可用性的图数据库解决方案，支持多模型架构。
+
+##### 3. 支持 SPARQL 查询语言的图数据库
+    
+    SPARQL 是一种用于查询 RDF 图的标准查询语言。以下是一些支持 SPARQL 的数据库：
+
+	•	Virtuoso
+        •	描述: Virtuoso 是一个多用途数据库管理系统，支持 SPARQL 查询。
+        •	特点: 支持大规模 RDF 数据存储，广泛用于语义网应用。
+
+	•	GraphDB
+        •	描述: GraphDB 是一个企业级的 RDF 图数据库，支持 SPARQL 查询。
+        •	特点: 强大的推理能力和高效的 SPARQL 查询，适用于语义网和本体开发。
+
+	•	Blazegraph
+        •	描述: Blazegraph 是一个高性能的 RDF 图数据库，支持 SPARQL 1.1 标准。
+        •	特点: 适合大规模 RDF 数据查询，常用于学术和研究项目。
+
+#### 基于属性图、RDF图模型和OWL（Web本体语言）的主要代表图数据库分类：
+
+##### 1. 基于属性图的图数据库
+
+主要代表:
+
+	•	Neo4j：是最流行的图数据库之一，使用属性图模型，允许节点和边拥有属性。
+	•	JanusGraph：一个分布式图数据库，支持属性图模型，可以与大数据技术（如HBase、Cassandra）集成。
+	•	ArangoDB：一个多模型数据库，支持属性图和文档模型。
+
+特点:
+	•	模型：图由节点（顶点）、边（关系）和属性（键值对）组成。节点和边都可以有属性。
+	•	查询语言：Neo4j使用Cypher查询语言，ArangoDB使用AQL（ArangoDB查询语言）。
+
+##### 2.基于RDF图模型的图数据库
+
+主要代表:
+
+	•	Apache Jena：一个Java框架，支持RDF数据模型和SPARQL查询语言。
+	•	Virtuoso：一个多功能数据库，支持RDF和SPARQL，常用于语义网应用。
+	•	Stardog：一个商业图数据库，支持RDF、SPARQL和OWL。
+
+特点:
+
+	•	模型：RDF（资源描述框架）使用三元组（主语-谓词-宾语）来表示数据。数据通常是语义网的数据。
+	•	查询语言：SPARQL，用于查询RDF数据。
+	•	用途：适合于处理语义网数据、知识图谱和互联数据。
+
+##### 3.基于OWL本体语言的图数据库
+
+主要代表:
+
+	•	Protégé：一个用于构建OWL本体的开源工具，允许创建和管理本体。
+	•	OntoText GraphDB：一个支持OWL和RDF的图数据库，提供高效的查询和推理能力。
+
+特点:
+
+	•	模型：OWL（Web本体语言）用于定义和处理本体，包括类、属性和实例的复杂关系。OWL是RDF的扩展，提供更强的表达能力。
+	•	查询语言：通常与RDF数据结合使用，查询语言为SPARQL。
+	•	用途：适合于需要复杂推理和语义处理的应用，如知识图谱和领域本体。
+
+总结
+
+	•	属性图数据库（如Neo4j）更适合于有复杂关系和动态属性的数据，主要关注图的结构和属性。
+	•	RDF图数据库（如Virtuoso）主要用于语义网和知识图谱，侧重于数据的互操作性和标准化。
+	•	OWL（如Protégé）则用于定义和管理复杂的本体，提供更高级的语义描述和推理能力。
+
 ## 4. 知识图谱的知识抽取
 
 知识图谱的体系架构分为3个部分，分别获取源数据、知识融合和知识计算与知识应用。
