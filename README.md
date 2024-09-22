@@ -27,3 +27,5 @@
 - [2024-33W-graphRAG-visualization](graphRAG/graphRAG-visualization-20240818.md)
 - [2024-34W-graphRAG-agentic-practice](graphRAG/graphRAG-agentic-practice-20240825.md)
 - [2024-35W-multimode-image&text_rag](multimodelRAG/multimodelRAG-imageTextSearch-20240901.md)
+- [2024-36W-asyc-programming_AzureAI_SDK](AsyncioConcurrencyProgramming/AzureAI_AIO_SDK_introduce_and_practice_20240915.md)
+- [2024-37W-multimode-graphrag](multimodelRAG/multimodel-graphRAG-20240922.md)
