@@ -202,8 +202,6 @@ vector_search=VectorSearch(
 
     • 通过GPT-4O模型,基于内容和问题生成最终的答案和相关图片。
 
-![retrieve-process-flow](./multimodelRAG-imageTextSearch-20240901/retrieve-process-flow.png)
-![retrieve-process-components](./multimodelRAG-imageTextSearch-20240901/retrieve-process-components.png)
 
 ### 检索结果的处理
 
