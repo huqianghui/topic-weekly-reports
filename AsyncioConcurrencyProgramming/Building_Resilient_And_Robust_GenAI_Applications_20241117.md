@@ -144,17 +144,17 @@
         
         Send telemetry to the OpenTelemetry Collector to make sure it’s exported correctly. Using the Collector in production environments is a best practice. To visualize your telemetry, export it to a backend such as Jaeger, Zipkin, Prometheus, or a vendor-specific backend.
 
-        ![openAIAsyncRetry](AsyncioConcurrencyProgramming/Building_Resilient_And_Robust_GenAI_Applications_20241110/openAIAsyncRetry.png)
+        ![openAIAsyncRetry](./Building_Resilient_And_Robust_GenAI_Applications_20241110/openAIAsyncRetry.png)
 
 
     
     2. Prompt flow 默认给DAG flow 开启 ，所以只要执行DAG flow 或者 batch run 都可以看到trace UI
-        ![openAIAsyncRetry](AsyncioConcurrencyProgramming/Building_Resilient_And_Robust_GenAI_Applications_20241110/prompt-flow-trace-ui.png)
+        ![openAIAsyncRetry](./Building_Resilient_And_Robust_GenAI_Applications_20241110/prompt-flow-trace-ui.png)
 
     3. 在trace UI 中支持python 代码的过滤
 
     4. trace信息，在本地存储的sqllite中
-        ![trace-log-zipkin](AsyncioConcurrencyProgramming/Building_Resilient_And_Robust_GenAI_Applications_20241110/trace-log-zipkin.png)
+        ![trace-log-zipkin](./Building_Resilient_And_Robust_GenAI_Applications_20241110/trace-log-zipkin.png)
 
     5. 可以通过命令行或者SDK来删除trace 信息
         ```command
@@ -162,10 +162,10 @@
         ```
    
     6. 通过pf service status 查看配置和状态
-        ![prompt-flow-status](AsyncioConcurrencyProgramming/Building_Resilient_And_Robust_GenAI_Applications_20241110/prompt-flow-status.png)
+        ![prompt-flow-status](./Building_Resilient_And_Robust_GenAI_Applications_20241110/prompt-flow-status.png)
 
     7. 对应的配置文件
-        ![prompt-flow-config2](AsyncioConcurrencyProgramming/Building_Resilient_And_Robust_GenAI_Applications_20241110/prompt-flow-config2.png)
+        ![prompt-flow-config2](./Building_Resilient_And_Robust_GenAI_Applications_20241110/prompt-flow-config2.png)
 
 - Azure Monitor集成
 
