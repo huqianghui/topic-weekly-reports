@@ -1,6 +1,6 @@
 1. 什么是Embedding？
 嵌入是表示内容（如自然语言或代码）中概念的数字序列，便于嵌入测量文本字符串的相关性 。嵌入使机器学习模型和其他算法能够轻松理解内容之间的关系并执行聚类或检索等任务。
-[text2Vector](./Embedding模型对RAG的重要性_20241118/text2Vector.png)
+![text2Vector](./Embedding模型对RAG的重要性_20241118/text2Vector.png)
 
 嵌入是浮点数的向量（列表）。两个向量之间的距离衡量它们的相关性。小距离表示高相关性，大距离表示低相关性。
 
@@ -22,8 +22,8 @@
 - 模型版本和维度大小
 
 首先看看OAI的基准测试
-[OAI_Embedding_Model_Performance_table](./Embedding模型对RAG的重要性_20241118/OAI_Embedding_Model_Performance_table.webp)
-[OAI_Embedding_performance](./Embedding模型对RAG的重要性_20241118/OAI_Embedding_performance.webp)
+![OAI_Embedding_Model_Performance_table](./Embedding模型对RAG的重要性_20241118/OAI_Embedding_Model_Performance_table.webp)
+![OAI_Embedding_performance](./Embedding模型对RAG的重要性_20241118/OAI_Embedding_performance.webp)
 
 正如预期的那样，对于大型模型，使用较大的嵌入大小 3072 可以观察到更好的性能。
 但是如果使用新的版本的话，即使相同的维度信息也可以得到更好的效果。
@@ -33,7 +33,7 @@
 - 更多开源Embedding模型对比，可以基于自己的需求场景：特定语言，或者多语言，多模态，特定行业等
 
 围绕嵌入的开源研究非常活跃，并且定期发布新模型。[Hugging Face 😊 MTEB](https://huggingface.co/spaces/mteb/leaderboard) 排行榜是了解最新发布模型的好地方。
-[Embedding-leader-board](./Embedding模型对RAG的重要性_20241118/Embedding-leader-board.png)
+![Embedding-leader-board](./Embedding模型对RAG的重要性_20241118/Embedding-leader-board.png)
 
 
 
