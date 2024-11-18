@@ -31,8 +31,45 @@ RAG 优点:
 - RAG 更易于调试和评估: RAG 是一本打开的书——这意味着，您可以轻松地从一个问题到另一个答案。这对于大型文档或复杂的推理任务特别有用。这意味着 RAG 可以帮助您轻松调试答案，而放置太多上下文可能会难以处理并导致错误/幻觉。
 - RAG 能够保持最新状态: RAG 的最大优势之一是它将最新的数据集成到 LLM 的决策过程中。通过直接连接到更新的数据库或进行外部调用，RAG 确保正在使用的信息是最新的可用信息，这对于及时性至关重要的应用程序至关重要。
 - RAG 战略性地处理信息: 通常，当关键信息位于输入的开头或结尾时，LLMs 的性能最佳。这意味着，根据最近的研究，如果你问的问题涉及上下文的其余部分，你可能会对答案感到失望。同时，使用 RAG，有一些技术，例如对文档进行重新排序，您可以使用这些技术根据文档的优先级战略性地更改文档的位置。如果在上下文中完成，这将是一个很大的障碍。
+![contextLLM_VS_RAG](./上下文感知RAG_EnhancingRAGwithContextualRetrieval_20241118/RAG_0-1729080789691.gif)
 
 2. 如果更有效利用LLM context windwos来加强RAG
 
+开发人员通常使用 Retrieval-Augmented Generation （RAG） 来增强 AI 模型的知识。RAG 是一种从知识库中检索相关信息并将其附加到用户提示符的方法，从而显著增强了模型的响应。问题在于，传统的 RAG 解决方案在编码信息时会删除上下文，这通常会导致系统无法从知识库中检索相关信息。
+![standardRAG](./上下文感知RAG_EnhancingRAGwithContextualRetrieval_20241118/standardRAG.webp)
 
+同时OpenAI和Azure OpenAI给出了提示词缓存[prompt-caching](https://learn.microsoft.com/zh-cn/azure/ai-services/openai/how-to/prompt-caching)
+可以进一步的降低长context的成本，提升相应速度。这样构建一个固定比较长的context，来对每个chunk进行上下文的补全。
 
+通过一个简单的提示，让它对文章的内容上下文进行说明:
+编写了一个提示，指示模型提供简洁的、特定于 chunk 的上下文，该上下文使用整个文档的上下文来解释 chunk。
+```prompt
+<document> 
+{{WHOLE_DOCUMENT}} 
+</document> 
+Here is the chunk we want to situate within the whole document 
+<chunk> 
+{{CHUNK_CONTENT}} 
+</chunk> 
+Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
+```
+架构如图：
+![contexttual_retrieval_Preprocessing](./上下文感知RAG_EnhancingRAGwithContextualRetrieval_20241118/contexttual_retrieval_Preprocessing.webp)
+
+3. 初步评测数据
+
+使用embedding检索并检索前 20 个块的所有知识域的平均性能。衡量在前 20 个区块中无法检索的相关文档的百分比。
+![benchmark_data_top20](./上下文感知RAG_EnhancingRAGwithContextualRetrieval_20241118/benchmark_data_top20.webp)
+
+结论：
+1. 上下文嵌入将前 20 个块的检索失败率降低了 35%（5.7% → 3.7%）
+2. 结合上下文嵌入和上下文 BM25 将前 20 个块的检索失败率降低了 49%（5.7% → 2.9%）。
+
+***向上下文窗口中添加更多数据块会增加包含相关信息的机会。但是，更多信息可能会分散模型的注意力，因此这是有限制的。我们尝试了交付 5、10 和 20 个 chunk，发现使用 20 是这些选项中性能最高的**
+
+4. 通过重新排名进一步提高性能
+
+重新排名是一种常用的筛选技术，用于确保仅将最相关的数据块传递给模型。重新排名可提供更好的响应，并降低成本和延迟，因为模型处理的信息更少。
+![rerank_contextual_retrieval](./上下文感知RAG_EnhancingRAGwithContextualRetrieval_20241118/rerank_contextual_retrieval.webp)
+
+发现 Reranked 上下文嵌入和上下文 BM25 将前 20 个块的检索失败率降低了 67% （5.7% → 1.9%）。
