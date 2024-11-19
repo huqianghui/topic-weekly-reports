@@ -13,5 +13,5 @@
 
 可能探索的方案：
 
-- 结合一个小模型，让它能快速，大context-windows的响应生成？
+- 结合一个小模型(phi3.5)，让它能快速，大context-windows的响应生成？
 - 使用LLM模型，但是提供了prompt cache也能够快速响应？
