@@ -8,6 +8,9 @@ Reranker 模型是另一种不一样的模型（学名叫做 Cross-Encoder），
 Reranker 模型的输入是两段文字，输出一个相关性分数 0 到 1 之间（AI Search的senamic mode输出的是0~4），也就是我们会将用户 query 跟每一份文件都去算相关性分数，然后根据分数排序。
 ![Bi_vs_Cross-Encoder](./语义重排senamicReranker/Bi_vs_Cross-Encoder.png)
 
+***Bi-Encoder指的是模型的计算方式和设计架构：查询和候选项被分别编码为向量。这两者是可以兼容的***
+***Cross-Encoder 会临时构建一个联合的编码表示。在查询和候选项拼接后，模型会在推理过程中动态生成这个表示，而不是提前存储或预计算。这种方法可以捕捉查询和候选项之间的细粒度交互，因为它们是作为一个整体输入到模型中的。***
+
 Reranker 的执行速度较慢，成本较高，但在判断相关性上面，比 embedding 模型更准确.
 
 因此当数据非常多、想要快又要准时，跟 embeddings模型以及BM25搭配组合的混合搜索，做成两阶段检索。
