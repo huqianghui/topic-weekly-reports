@@ -6,7 +6,7 @@
 
 Reranker 模型是另一种不一样的模型（学名叫做 Cross-Encoder），不同于 embedding 模型（学名叫做 Bi-Encoder） 输入是文字，输出是高维度矢量。 
 Reranker 模型的输入是两段文字，输出一个相关性分数 0 到 1 之间（AI Search的senamic mode输出的是0~4），也就是我们会将用户 query 跟每一份文件都去算相关性分数，然后根据分数排序。
-![Bi_vs_Cross-Encoder](./语义重排senamicReranker/Bi_vs_Cross-Encoder.png)
+![Bi_vs_Cross-Encoder](./语义重排senamicReranker/bi-encoder_cross-encoder.png)
 
 ***Bi-Encoder指的是模型的计算方式和设计架构：查询和候选项被分别编码为向量。这两者是可以兼容的***
 ***Cross-Encoder 会临时构建一个联合的编码表示。在查询和候选项拼接后，模型会在推理过程中动态生成这个表示，而不是提前存储或预计算。这种方法可以捕捉查询和候选项之间的细粒度交互，因为它们是作为一个整体输入到模型中的。***
@@ -35,6 +35,7 @@ reranker 是 “跨编码器” 神经网络，它通过一起处理查询-文�
 挑选了4个embedding模型，以及10个Reranker模型，top-k取10,50,100三种，共有78种组合。
 先用 embedding 模型挑出 top-k 10/50/100，然后再用 Reranker 模型重排取出 top 5 后，再评分命中率和 MRR （倒数排名）
 
+![sentence_transformer](./语义重排senamicReranker/sentence_transformer.png)
 *** 倒数排名：对于每个查询，系统返回一个按相关性排序的结果列表。找到第一个相关结果的位置，计算它的倒数（如果相关结果在第 1 位，贡献值为  1 （最佳情况）。如果相关结果在第 2 位，贡献值为  0.5 如果相关结果在第  k  位，贡献值为  \frac{1}{k} 对所有查询的倒数排名取平均值，得到系统的整体性能。**
 
 ![](./语义重排senamicReranker/reranker-benchmark.jpeg)
