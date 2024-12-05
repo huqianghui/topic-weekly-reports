@@ -1,5 +1,7 @@
 ## LLM 漂移、提示漂移、链接和级联
 
+参考论文: [How Is ChatGPT’s Behavior Changing over Time?](https://arxiv.org/pdf/2307.09009)
+
 提示链（Prompt Chaining）可以手动或自动执行;
 手动需要通过 GUI 链构建工具手动制作链（比如prompt flow 或dify之类的平台框架）。
 Autonomous Agent 在执行和利用他们所掌握的工具时动态创建链。
