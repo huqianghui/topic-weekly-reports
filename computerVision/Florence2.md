@@ -78,4 +78,11 @@ region：对于特定于区域的任务，将位置标记添加到标记器的�
         2. quad box represetation四边形框表示 (x0, y0, ..., x3, y3)：对于文本检测和识别任务，对包围文本的四边形的每个坐标使用位置标记。位置标记是四边形框每个角的坐标，从左上角开始顺时针旋转。
         3. Ploygon represetation多边形表示（x0, y0, ..., xn, yn）：用于引用分割任务，位置标记代表多边形的顶点。位置标记是多边形顶点的坐标，按顺时针顺序排列。
 
+### florence2的benchmark 数据
+
+通用视觉基础模型的零样本性能测试结果如下：
+![](./Florence2/Zero-shot%20performance%20of%20generalist%20vision%20foundation.png)
+
+专家模型和通用模型在字幕和 VQA 任务上的表现结果如下：
+![](./Florence2/Performance%20of%20specialist%20and%20generalist%20models%20on%20captioning%20and%20VQA.png)
 
